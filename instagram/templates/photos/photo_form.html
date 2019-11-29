@@ -6,6 +6,12 @@
 </head>
 <body>
     My lovely form<br>
-    {{ form }}
-</body>
-</html>
+    <form method="post" action="">
+      {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+      {{ form }}
+      <button type="submit">Submit</button>
+    </form>
+    </body>
+    </html>
